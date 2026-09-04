@@ -1,11 +1,12 @@
 {
   "name": "sapcc-skill",
-  "version": "2.0.0",
-  "description": "Pi agent skill for SAP Commerce Cloud – execute Groovy scripts and FlexibleSearch queries, with room to grow into a full SAP CC operations skill",
+  "version": "2.1.0",
+  "description": "Pi agent skill for SAP Commerce Cloud – execute Groovy scripts and FlexibleSearch queries via HAC, and manage Cloud Portal operations (environments, builds, deployments, backups, scaling, certificates...)",
   "main": "scripts/execute.js",
   "scripts": {
     "setup": "node scripts/setup.js",
-    "test": "node scripts/execute.js --health-check"
+    "test": "node scripts/execute.js --health-check",
+    "test:portal": "node scripts/portal.js --health-check"
   },
   "keywords": [
     "sapcommerce",
@@ -15,7 +16,9 @@
     "sap",
     "pi-skill",
     "agent-skill",
-    "ccv2"
+    "ccv2",
+    "cloud-portal",
+    "devops"
   ],
   "author": {
     "name": "Youssef El Jaoujat",
@@ -33,6 +36,7 @@
   "homepage": "https://github.com/eljoujat/sapcc-skill#readme",
   "dependencies": {
     "sapcc-hac-client": "^1.0.3",
+    "sapcc-portal-cli": "^1.0.0",
     "dotenv": "^16.4.5"
   },
   "engines": {
